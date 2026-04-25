@@ -1,9 +1,11 @@
+import React from 'react';
+
 export interface ErrorCardProps {
   error: string;
   onRetry: () => void;
 }
 
-export default function ErrorCard({ error, onRetry }: ErrorCardProps) {
+const ErrorCard: React.FC<ErrorCardProps> = ({ error, onRetry }) => {
   return (
     <div className="w-full max-w-md mx-auto mt-8">
       <div className="bg-red-50 border border-red-200 rounded-2xl p-5 flex flex-col items-center text-center gap-4 shadow-sm">
@@ -28,4 +30,6 @@ export default function ErrorCard({ error, onRetry }: ErrorCardProps) {
       </div>
     </div>
   );
-}
+};
+
+export default ErrorCard;
