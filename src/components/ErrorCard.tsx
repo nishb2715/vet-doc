@@ -1,4 +1,4 @@
-interface ErrorCardProps {
+export interface ErrorCardProps {
   error: string;
   onRetry: () => void;
 }
